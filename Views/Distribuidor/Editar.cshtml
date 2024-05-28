@@ -1,0 +1,66 @@
+﻿@model T2_Ramos_Kevin.Models.Distribuidor;
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar</h1>
+
+<form method="post" asp-action="Editar">
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-intro pl-3">Editar Distribuidor</h2>
+        </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="NombreDistribuidor" class="from-label">Nombre Distribuidor</label>
+                    <input asp-for="NombreDistribuidor" class="from-control"/>
+                    <span asp-validation-for="NombreDistribuidor" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="RazonSocial" class="from-label">Razon Social</label>
+                    <input asp-for="RazonSocial" class="from-control" />
+                    <span asp-validation-for="RazonSocial" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Telefono" class="from-label">Teléfono</label>
+                    <input asp-for="Telefono" class="from-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="AnioInicioOperacion" class="from-label">Año Inicio de Operacion</label>
+                    <input asp-for="AnioInicioOperacion" class="from-control" />
+                    <span asp-validation-for="AnioInicioOperacion" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Contacto" class="from-label">Contacto</label>
+                    <input asp-for="Contacto" class="from-control" />
+                    <span asp-validation-for="Contacto" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <a asp-controller="Distribuidor" asp-action="Index" class="btn btn-success">Regresar</a>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+                <partial name="_ValidationScriptsPartial" />
+    }
+}                 
